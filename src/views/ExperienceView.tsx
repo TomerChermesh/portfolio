@@ -29,7 +29,7 @@ export const ExperienceView: React.FC = () => {
           <Box className="dot red" />
           <Box className="dot yellow" />
           <Box className="dot green" />
-          <Typography sx={{ ml: 1 }}>tomer@web:~/experience</Typography>
+          <Typography sx={{ ml: 1 }}>tomerchermesh/experience</Typography>
         </Box>
 
         <CardContent

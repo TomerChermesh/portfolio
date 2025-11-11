@@ -14,7 +14,7 @@ export const HomeBubbleGraph: React.FC<Props> = ({ onChangeView }) => {
   };
 
   const downloadCv = () => {
-    window.open("/cv/TomerChermeshCV.pdf", "_blank");
+    window.open("/TomerChermeshCV.pdf", "_blank");
   };
 
   const bubbles: BubbleConfig[] = [
@@ -31,7 +31,7 @@ export const HomeBubbleGraph: React.FC<Props> = ({ onChangeView }) => {
       label: "LinkedIn",
       subLabel: "Profile",
       onClick: () =>
-        openExternal("https://www.linkedin.com/in/your-linkedin"),
+        openExternal("https://www.linkedin.com/in/tomerchermesh"),
     },
     {
       id: "experience",
