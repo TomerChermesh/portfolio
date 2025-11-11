@@ -1,13 +1,9 @@
 // src/components/BubbleGraph.tsx
 import React from "react";
 import { Box, Button, Typography } from "@mui/material";
+import { BubbleConfig } from "../types/bubble";
 
-export type BubbleConfig = {
-  id: string;
-  label: string;
-  subLabel?: string;
-  onClick?: () => void;
-};
+
 
 type BubbleGraphProps = {
   centerLabel: string;

@@ -39,9 +39,6 @@ export const EducationView: React.FC = () => {
             fontSize: 13,
           }}
         >
-          <Typography className="line">
-            <span className="prompt">$</span> cat education.md
-          </Typography>
 
           <Box className="entry">
             <Typography className="entry-title">
