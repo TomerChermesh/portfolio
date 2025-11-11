@@ -1,8 +1,9 @@
+// src/views/InterestsView.tsx
 import React from "react";
+import { Box, Typography } from "@mui/material";
 import { BubbleGraph, BubbleConfig } from "../components/BubbleGraph";
 
 export const InterestsView: React.FC = () => {
-  // בינתיים מדגים כמה תחביבים לדוגמה
   const bubbles: BubbleConfig[] = [
     { id: "football", label: "Football" },
     { id: "data", label: "Data & Analytics" },
@@ -11,9 +12,13 @@ export const InterestsView: React.FC = () => {
   ];
 
   return (
-    <div className="detail-view">
-      <h2 className="detail-title">Interests</h2>
-      <BubbleGraph centerLabel="Tomer" bubbles={bubbles} />
-    </div>
+    <Box sx={{ pt: 6, textAlign: "center" }}>
+      <Typography variant="h5" sx={{ mb: 2 }}>
+        Interests
+      </Typography>
+      <Box sx={{ display: "flex", justifyContent: "center" }}>
+        <BubbleGraph centerLabel="Tomer" bubbles={bubbles} />
+      </Box>
+    </Box>
   );
 };

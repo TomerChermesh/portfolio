@@ -1,4 +1,6 @@
+// src/components/HomeBubbleGraph.tsx
 import React from "react";
+import { Box } from "@mui/material";
 import { BubbleGraph, BubbleConfig } from "./BubbleGraph";
 import type { View } from "../App";
 
@@ -12,33 +14,24 @@ export const HomeBubbleGraph: React.FC<Props> = ({ onChangeView }) => {
   };
 
   const downloadCv = () => {
-    window.open("/TomerChermeshCV.pdf", "_blank");
+    window.open("/cv/TomerChermeshCV.pdf", "_blank");
   };
 
   const bubbles: BubbleConfig[] = [
-    {
-      id: "cv",
-      label: "CV",
-      onClick: downloadCv,
-    },
-    {
-      id: "projects",
-      label: "Projects",
-      onClick: () => onChangeView("projects"),
-    },
+    { id: "cv", label: "CV", onClick: downloadCv },
+    { id: "projects", label: "Projects", onClick: () => onChangeView("projects") },
     {
       id: "github",
       label: "GitHub",
       subLabel: "Profile",
-      onClick: () =>
-        openExternal("https://github.com/TomerChermesh"),
+      onClick: () => openExternal("https://github.com/TomerChermesh"),
     },
     {
       id: "linkedin",
       label: "LinkedIn",
       subLabel: "Profile",
       onClick: () =>
-        openExternal("https://www.linkedin.com/in/tomerchermesh"),
+        openExternal("https://www.linkedin.com/in/your-linkedin"),
     },
     {
       id: "experience",
@@ -59,8 +52,15 @@ export const HomeBubbleGraph: React.FC<Props> = ({ onChangeView }) => {
   ];
 
   return (
-    <div className="home-layout">
+    <Box
+      sx={{
+        width: "100%",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+      }}
+    >
       <BubbleGraph centerLabel="Tomer Chermesh" bubbles={bubbles} />
-    </div>
+    </Box>
   );
 };

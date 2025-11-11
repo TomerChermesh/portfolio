@@ -1,4 +1,6 @@
+// src/components/BubbleGraph.tsx
 import React from "react";
+import { Box, Button, Typography } from "@mui/material";
 
 export type BubbleConfig = {
   id: string;
@@ -16,13 +18,15 @@ export const BubbleGraph: React.FC<BubbleGraphProps> = ({
   centerLabel,
   bubbles,
 }) => {
-  const radius = 38; // באחוזים יחסית למיכל
+  const radius = 38;
 
   return (
-    <div className="bubble-graph">
-      <div className="bubble bubble-center">
-        <span className="bubble-label">{centerLabel}</span>
-      </div>
+    <Box className="bubble-graph">
+      <Box className="bubble bubble-center">
+        <Typography variant="subtitle1" className="bubble-label">
+          {centerLabel}
+        </Typography>
+      </Box>
 
       {bubbles.map((bubble, index) => {
         const angle = (2 * Math.PI * index) / bubbles.length;
@@ -30,19 +34,26 @@ export const BubbleGraph: React.FC<BubbleGraphProps> = ({
         const top = 50 + radius * Math.sin(angle);
 
         return (
-          <button
+          <Button
             key={bubble.id}
             className="bubble bubble-node"
-            style={{ left: `${left}%`, top: `${top}%` }}
+            sx={{ left: `${left}%`, top: `${top}%` }}
             onClick={bubble.onClick}
           >
-            <span className="bubble-label">{bubble.label}</span>
+            <Typography className="bubble-label">
+              {bubble.label}
+            </Typography>
             {bubble.subLabel && (
-              <span className="bubble-sublabel">{bubble.subLabel}</span>
+              <Typography
+                className="bubble-sublabel"
+                sx={{ opacity: 0.8, fontSize: 11 }}
+              >
+                {bubble.subLabel}
+              </Typography>
             )}
-          </button>
+          </Button>
         );
       })}
-    </div>
+    </Box>
   );
 };

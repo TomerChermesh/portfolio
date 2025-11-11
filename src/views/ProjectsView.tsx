@@ -1,4 +1,6 @@
+// src/views/ProjectsView.tsx
 import React from "react";
+import { Box, Typography } from "@mui/material";
 import { BubbleGraph, BubbleConfig } from "../components/BubbleGraph";
 
 export const ProjectsView: React.FC = () => {
@@ -11,16 +13,19 @@ export const ProjectsView: React.FC = () => {
       id: "fpl",
       label: "FPL Mini-Leagues",
       subLabel: "Data",
-      onClick: () =>
-        openExternal("https://fpl.tomerchermesh.com"), // נחליט אח"כ על הדומיין
+      onClick: () => openExternal("https://fpl.tomerchermesh.com"),
     },
-    // בעתיד תוסיף כאן עוד בועות של פרויקטים
+    // תוסיף כאן פרויקטים נוספים בעתיד
   ];
 
   return (
-    <div className="detail-view">
-      <h2 className="detail-title">Projects</h2>
-      <BubbleGraph centerLabel="Projects" bubbles={bubbles} />
-    </div>
+    <Box sx={{ pt: 6, textAlign: "center" }}>
+      <Typography variant="h5" sx={{ mb: 2 }}>
+        Projects
+      </Typography>
+      <Box sx={{ display: "flex", justifyContent: "center" }}>
+        <BubbleGraph centerLabel="Projects" bubbles={bubbles} />
+      </Box>
+    </Box>
   );
 };
