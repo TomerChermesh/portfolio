@@ -59,14 +59,14 @@ export const HomeBubbleGraph: React.FC<Props> = ({ onChangeView }) => {
       subLabel: "Profile",
       icon: <LinkedInIcon sx={iconStyle} />,
       onClick: () =>
-        openExternal("https://www.linkedin.com/in/your-linkedin"), // לעדכן
+        openExternal("https://www.linkedin.com/in/tomerchermesh")
     },
     {
       id: "github",
       label: "GitHub",
       subLabel: "Profile",
       icon: <GitHubIcon sx={iconStyle} />,
-      onClick: () => openExternal("https://github.com/TomerChermesh"),
+      onClick: () => openExternal("https://github.com/TomerChermesh")
     },
     {
       id: "projects",
