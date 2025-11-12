@@ -18,8 +18,6 @@ body {
   padding: 24px;
 }
 
-/* ------ home layout ------ */
-
 .home-layout {
   width: 100%;
   max-width: 720px;
@@ -82,8 +80,6 @@ body {
   opacity: 0.8;
 }
 
-/* ------ detail layout ------ */
-
 .detail-layout {
   width: 100%;
   max-width: 880px;
@@ -120,8 +116,6 @@ body {
   margin-bottom: 16px;
 }
 
-/* ------ terminal-style card (Experience / Education) ------ */
-
 .terminal-card {
   margin-top: 40px;
   background: #020617;
@@ -141,22 +135,6 @@ body {
   border-bottom: 1px solid rgba(30, 64, 175, 0.5);
   font-size: 12px;
   color: #9ca3af;
-}
-
-.dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 999px;
-}
-
-.dot.red {
-  background: #f97373;
-}
-.dot.yellow {
-  background: #facc15;
-}
-.dot.green {
-  background: #4ade80;
 }
 
 .path {
@@ -195,4 +173,99 @@ body {
 
 .entry-body {
   color: #e5e7eb;
+}
+
+.bubble-graph {
+  position: relative;
+  width: 420px;
+  height: 420px;
+}
+
+.center-wrapper {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.center-circle {
+  width: 190px;
+  height: 190px;
+  border-radius: 999px;
+  border: 1px solid rgba(96, 165, 250, 0.9);
+  box-shadow: 0 0 50px rgba(59, 130, 246, 0.55);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at top, #111827, #020617);
+}
+
+.center-ring {
+  padding: 6px;
+  border-radius: 999px;
+  background: radial-gradient(circle at top, rgba(37, 99, 235, 0.8), transparent);
+}
+
+.center-name {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.orbit-bubble {
+  position: absolute !important;
+  transform: translate(-50%, -50%);
+  border-radius: 999px;
+}
+
+.orbit-inner {
+  width: 96px;
+  height: 96px;
+  border-radius: 999px;
+  border: 1px solid rgba(37, 99, 235, 0.7);
+  background: radial-gradient(circle at top, #020617, #020617);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.18s ease-out, box-shadow 0.18s ease-out,
+    border-color 0.18s ease-out, background 0.18s ease-out;
+  box-shadow: 0 0 12px rgba(15, 23, 42, 0.9);
+}
+
+.orbit-bubble:hover .orbit-inner {
+  transform: scale(1.15);
+  box-shadow: 0 0 26px rgba(59, 130, 246, 0.75);
+  border-color: rgba(129, 140, 248, 0.95);
+  background: radial-gradient(circle at top, #111827, #020617);
+}
+
+.orbit-icon {
+  margin-bottom: 4px;
+}
+
+.orbit-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.orbit-sublabel {
+  font-size: 10px;
+  opacity: 0.8;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+}
+.dot.red {
+  background: #f97373;
+}
+.dot.yellow {
+  background: #facc15;
+}
+.dot.green {
+  background: #4ade80;
 }

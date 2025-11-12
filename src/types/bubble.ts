@@ -1,6 +1,7 @@
 export type BubbleConfig = {
   id: string;
-  label: string;
+  icon: string;
+  label?: string;
   subLabel?: string;
   onClick?: () => void;
 };
