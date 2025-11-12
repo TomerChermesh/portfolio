@@ -28,7 +28,6 @@ export const BubbleGraph: React.FC<BubbleGraphProps> = ({ bubbles }) => {
               TC
             </Avatar>
           </Box>
-          <Typography className="center-name">Tomer Chermesh</Typography>
         </Box>
       </Box>
 
