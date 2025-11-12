@@ -25,7 +25,7 @@ export const HomeBubbleGraph: React.FC<Props> = ({ onChangeView }) => {
     window.open("/TomerChermeshCV.pdf", "_blank");
   };
 
-  const iconStyle = { fontSize: 26 };
+  const iconStyle = { fontSize: 32 };
 
   const bubbles: BubbleConfig[] = [
     {
