@@ -1,8 +1,6 @@
 import React from "react";
 import { Box, ButtonBase, Typography, Avatar } from "@mui/material";
-import {BubbleConfig} from "../types/bubble";
-
-
+import { BubbleConfig } from "../types/bubble";
 
 type BubbleGraphProps = {
   bubbles: BubbleConfig[];
@@ -28,6 +26,7 @@ export const BubbleGraph: React.FC<BubbleGraphProps> = ({ bubbles }) => {
               TC
             </Avatar>
           </Box>
+          <Typography className="center-name">Tomer Chermesh</Typography>
         </Box>
       </Box>
 
@@ -37,22 +36,33 @@ export const BubbleGraph: React.FC<BubbleGraphProps> = ({ bubbles }) => {
         const top = 50 + radius * Math.sin(angle);
 
         return (
-          <ButtonBase
+          <Box
             key={bubble.id}
-            className="orbit-bubble"
+            className="orbit-bubble-wrapper"
             sx={{ left: `${left}%`, top: `${top}%` }}
-            onClick={bubble.onClick}
           >
-            <Box className="orbit-inner">
-              <Box className="orbit-icon">{bubble.icon}</Box>
-              <Typography className="orbit-label">{bubble.label}</Typography>
+            <ButtonBase
+              className="orbit-bubble"
+              onClick={bubble.onClick}
+              disableRipple
+            >
+              <Box className="orbit-inner">
+                <Box className="orbit-icon">{bubble.icon}</Box>
+              </Box>
+            </ButtonBase>
+
+            <Typography className="orbit-label-hover">
+              {bubble.label}
               {bubble.subLabel && (
-                <Typography className="orbit-sublabel">
-                  {bubble.subLabel}
+                <Typography
+                  component="span"
+                  className="orbit-sublabel-hover"
+                >
+                  {` · ${bubble.subLabel}`}
                 </Typography>
               )}
-            </Box>
-          </ButtonBase>
+            </Typography>
+          </Box>
         );
       })}
     </Box>
