@@ -30,8 +30,7 @@ export const HomeBubbleGraph: React.FC<Props> = ({ onChangeView }) => {
   const bubbles: BubbleConfig[] = [
     {
       id: "experience",
-      label: "Professional",
-      subLabel: "Experience",
+      label: "Professional Experience",
       icon: <WorkOutlineIcon sx={iconStyle} />,
       onClick: () => onChangeView("experience"),
     },
@@ -56,7 +55,6 @@ export const HomeBubbleGraph: React.FC<Props> = ({ onChangeView }) => {
     {
       id: "linkedin",
       label: "LinkedIn",
-      subLabel: "Profile",
       icon: <LinkedInIcon sx={iconStyle} />,
       onClick: () =>
         openExternal("https://www.linkedin.com/in/tomerchermesh")
@@ -64,7 +62,6 @@ export const HomeBubbleGraph: React.FC<Props> = ({ onChangeView }) => {
     {
       id: "github",
       label: "GitHub",
-      subLabel: "Profile",
       icon: <GitHubIcon sx={iconStyle} />,
       onClick: () => openExternal("https://github.com/TomerChermesh")
     },
