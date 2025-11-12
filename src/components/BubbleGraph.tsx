@@ -42,11 +42,7 @@ export const BubbleGraph: React.FC<BubbleGraphProps> = ({bubbles}) => {
                             </Box>
                         </ButtonBase>
 
-                        <Typography className='orbit-label-hover'>
-                            {bubble.label}
-                            {bubble.subLabel && <Typography component='span'
-                                                            className='orbit-sublabel-hover'> · {bubble.subLabel}</Typography>}
-                        </Typography>
+                        <Typography className='orbit-label-hover'>{bubble.label}</Typography>
                     </Box>
                 );
             })}
