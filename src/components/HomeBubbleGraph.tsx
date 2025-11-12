@@ -29,24 +29,6 @@ export const HomeBubbleGraph: React.FC<Props> = ({ onChangeView }) => {
 
   const bubbles: BubbleConfig[] = [
     {
-      id: "experience",
-      label: "Professional Experience",
-      icon: <WorkOutlineIcon sx={iconStyle} />,
-      onClick: () => onChangeView("experience"),
-    },
-    {
-      id: "education",
-      label: "Education",
-      icon: <SchoolIcon sx={iconStyle} />,
-      onClick: () => onChangeView("education"),
-    },
-    {
-      id: "interests",
-      label: "Interests",
-      icon: <InterestsIcon sx={iconStyle} />,
-      onClick: () => onChangeView("interests"),
-    },
-    {
       id: "cv",
       label: "CV",
       icon: <DescriptionIcon sx={iconStyle} />,
@@ -64,6 +46,24 @@ export const HomeBubbleGraph: React.FC<Props> = ({ onChangeView }) => {
       label: "GitHub",
       icon: <GitHubIcon sx={iconStyle} />,
       onClick: () => openExternal("https://github.com/TomerChermesh")
+    },
+    {
+      id: "interests",
+      label: "Interests",
+      icon: <InterestsIcon sx={iconStyle} />,
+      onClick: () => onChangeView("interests"),
+    },
+    {
+      id: "experience",
+      label: "Professional Experience",
+      icon: <WorkOutlineIcon sx={iconStyle} />,
+      onClick: () => onChangeView("experience"),
+    },
+    {
+      id: "education",
+      label: "Education",
+      icon: <SchoolIcon sx={iconStyle} />,
+      onClick: () => onChangeView("education"),
     },
     {
       id: "projects",
