@@ -4,7 +4,7 @@ import {Box, Typography} from "@mui/material";
 import { BubbleGraph } from "../components/BubbleGraph";
 import {BubbleConfig} from "../types/bubble";
 import {PROJECT_FPL_MLD} from "../constants/links";
-import FPL_PROJECT_IMG from 'assets/fpl_mld_img.png'
+import FPL_PROJECT_IMG from '../assets/fpl_mld_img.png'
 
 
 export const ProjectsView: React.FC = () => {
