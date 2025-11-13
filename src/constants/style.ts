@@ -1,0 +1,1 @@
+export const ICON_STYLE: {fontSize: number} = { fontSize: 32 }

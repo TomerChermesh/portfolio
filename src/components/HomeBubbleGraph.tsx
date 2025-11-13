@@ -9,66 +9,62 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import FolderSpecialIcon from "@mui/icons-material/FolderSpecial";
 
 import { BubbleGraph } from "./BubbleGraph";
-import type { View } from "../App";
-import {BubbleConfig} from "../types/bubble";
+import {BubbleConfig, BubbleGraphProps} from "../types/bubble";
+import {CV_FILE_PATH, GITHUB_PROFILE, LINKEDIN_PROFILE} from "../constants/links";
+import {ICON_STYLE} from "../constants/style";
 
-type Props = {
-  onChangeView: (view: View) => void;
-};
 
-export const HomeBubbleGraph: React.FC<Props> = ({ onChangeView }) => {
+export const HomeBubbleGraph: React.FC<BubbleGraphProps> = ({ onChangeView }) => {
   const openExternal = (url: string) => {
     window.open(url, "_blank", "noreferrer");
   };
 
   const downloadCv = () => {
-    window.open("/TomerChermeshCV.pdf", "_blank");
+    window.open(CV_FILE_PATH, "_blank");
   };
-
-  const iconStyle = { fontSize: 32 };
 
   const bubbles: BubbleConfig[] = [
     {
       id: "cv",
       label: "CV",
-      icon: <DescriptionIcon sx={iconStyle} />,
+      icon: <DescriptionIcon sx={ICON_STYLE} />,
       onClick: downloadCv,
     },
     {
       id: "linkedin",
       label: "LinkedIn",
-      icon: <LinkedInIcon sx={iconStyle} />,
+      icon: <LinkedInIcon sx={ICON_STYLE} />,
       onClick: () =>
-        openExternal("https://www.linkedin.com/in/tomerchermesh")
+        openExternal(LINKEDIN_PROFILE)
     },
     {
       id: "github",
       label: "GitHub",
-      icon: <GitHubIcon sx={iconStyle} />,
-      onClick: () => openExternal("https://github.com/TomerChermesh")
+      icon: <GitHubIcon sx={ICON_STYLE} />,
+      onClick: () => openExternal(GITHUB_PROFILE)
     },
     {
       id: "interests",
       label: "Interests",
-      icon: <InterestsIcon sx={iconStyle} />,
+      icon: <InterestsIcon sx={ICON_STYLE} />,
       onClick: () => onChangeView("interests"),
     },
     {
       id: "experience",
       label: "Professional Experience",
-      icon: <WorkOutlineIcon sx={iconStyle} />,
+      icon: <WorkOutlineIcon sx={ICON_STYLE} />,
       onClick: () => onChangeView("experience"),
     },
     {
       id: "education",
       label: "Education",
-      icon: <SchoolIcon sx={iconStyle} />,
+      icon: <SchoolIcon sx={ICON_STYLE} />,
       onClick: () => onChangeView("education"),
     },
     {
       id: "projects",
       label: "Projects",
-      icon: <FolderSpecialIcon sx={iconStyle} />,
+      icon: <FolderSpecialIcon sx={ICON_STYLE} />,
       onClick: () => onChangeView("projects"),
     },
   ];

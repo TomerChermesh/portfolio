@@ -1,7 +1,11 @@
 // src/views/ProjectsView.tsx
 import React from "react";
-import { Box, Typography } from "@mui/material";
-import { BubbleGraph, BubbleConfig } from "../components/BubbleGraph";
+import {Box, Typography} from "@mui/material";
+import { BubbleGraph } from "../components/BubbleGraph";
+import {BubbleConfig} from "../types/bubble";
+import {PROJECT_FPL_MLD} from "../constants/links";
+import FPL_PROJECT_IMG from 'assets/fpl_mld_img.png'
+
 
 export const ProjectsView: React.FC = () => {
   const openExternal = (url: string) => {
@@ -11,11 +15,10 @@ export const ProjectsView: React.FC = () => {
   const bubbles: BubbleConfig[] = [
     {
       id: "fpl",
-      label: "FPL Mini-Leagues",
-      subLabel: "Data",
-      onClick: () => openExternal("https://fpl.tomerchermesh.com"),
+      icon: <img src={FPL_PROJECT_IMG} alt={'fpl_mld'}/>,
+      label: "FPL Mini-Leagues Data",
+      onClick: () => openExternal(PROJECT_FPL_MLD),
     },
-    // תוסיף כאן פרויקטים נוספים בעתיד
   ];
 
   return (
@@ -24,7 +27,7 @@ export const ProjectsView: React.FC = () => {
         Projects
       </Typography>
       <Box sx={{ display: "flex", justifyContent: "center" }}>
-        <BubbleGraph centerLabel="Projects" bubbles={bubbles} />
+        <BubbleGraph bubbles={bubbles} />
       </Box>
     </Box>
   );

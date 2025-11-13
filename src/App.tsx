@@ -5,9 +5,9 @@ import "./App.css";
 import { HomeBubbleGraph } from "./components/HomeBubbleGraph";
 import { ExperienceView } from "./views/ExperienceView";
 import { EducationView } from "./views/EducationView";
-import { InterestsView } from "./views/InterestsView";
 import { ProjectsView } from "./views/ProjectsView";
 import { BackButton } from "./components/BackButton";
+import {InterestsBubbleGraph} from "./components/InterestsBubbleGraph";
 
 export type View =
   | "home"
@@ -65,7 +65,7 @@ function App() {
 
               {view === "experience" && <ExperienceView />}
               {view === "education" && <EducationView />}
-              {view === "interests" && <InterestsView />}
+              {view === "interests" && <InterestsBubbleGraph onChangeView={setView} />}
               {view === "projects" && <ProjectsView />}
             </Box>
           )}
