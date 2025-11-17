@@ -15,7 +15,7 @@ export const ProjectsView: React.FC = () => {
   const bubbles: BubbleConfig[] = [
     {
       id: "fpl",
-      icon: <img src={FPL_PROJECT_IMG} alt={'fpl_mld'}/>,
+      // icon: <img src={FPL_PROJECT_IMG} alt={'fpl_mld'}/>,
       label: "FPL Mini-Leagues Data",
       onClick: () => openExternal(PROJECT_FPL_MLD),
     },
@@ -30,5 +30,5 @@ export const ProjectsView: React.FC = () => {
         <BubbleGraph bubbles={bubbles} />
       </Box>
     </Box>
-  );
+  )
 };

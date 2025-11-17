@@ -7,6 +7,7 @@ import CandlestickChartIcon from '@mui/icons-material/CandlestickChart';
 import BeachAccessIcon from '@mui/icons-material/BeachAccess';
 import SportsEsportsIcon from '@mui/icons-material/SportsEsports';
 import LocalAirportIcon from '@mui/icons-material/LocalAirport';
+import Diversity1Icon from '@mui/icons-material/Diversity1';
 
 
 import { BubbleGraph } from "./BubbleGraph";
@@ -42,7 +43,7 @@ export const InterestsBubbleGraph: React.FC<BubbleGraphProps> = ({ onChangeView 
       icon: <CandlestickChartIcon sx={ICON_STYLE} />
     },
     {
-      id: "beach",
+      id: "beachNSea",
       label: "Beach & Sea",
       icon: <BeachAccessIcon sx={ICON_STYLE} />
     },
@@ -51,6 +52,11 @@ export const InterestsBubbleGraph: React.FC<BubbleGraphProps> = ({ onChangeView 
       label: "Traveling",
       icon: <LocalAirportIcon sx={ICON_STYLE} />
     },
+    {
+      id: "familyNFriends",
+      label: "Family & Friends",
+      icon: <Diversity1Icon sx={ICON_STYLE} />
+    }
   ];
 
   return (
