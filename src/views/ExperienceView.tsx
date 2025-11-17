@@ -32,54 +32,28 @@ export const ExperienceView: React.FC = () => {
           <Box className='dot red' />
           <Box className='dot yellow' />
           <Box className='dot green' />
-          <Typography sx={{ ml: 1 }}>
-            tomerchermesh/professionalExperience
-          </Typography>
+          <Typography sx={{ ml: 1 }}>tomerchermesh/professionalExperience</Typography>
         </Box>
 
         <CardContent
           sx={{
-            fontFamily:
-              'SF Mono, ui-monospace, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace',
+            fontFamily: 'SF Mono, ui-monospace, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace',
             fontSize: 13,
           }}
         >
           {experiences.map(company => (
             <Box key={company.company} sx={{ mb: 3 }}>
-              <Typography
-                sx={{
-                  fontWeight: 600,
-                  color: '#e5e7eb',
-                  mb: 0.5,
-                }}
-              >
-                {company.company}
-              </Typography>
+              <Typography sx={{ fontWeight: 600, color: '#e5e7eb', mb: 0.5 }}>{company.company}</Typography>
 
-              <Typography
-                sx={{
-                  fontSize: 12,
-                  color: '#9ca3af',
-                  mb: company.intro ? 1 : 1.5,
-                }}
-              >
+              <Typography sx={{ fontSize: 12, color: '#9ca3af', mb: company.intro ? 1 : 1.5 }}>
                 {company.location}
                 {company.isCurrentJob ? ' · Current' : ''}
               </Typography>
 
               {company.intro && company.intro.trim().length > 0 && (
-                <Typography
-                  sx={{
-                    fontSize: 12,
-                    color: '#cbd5f5',
-                    mb: 1.5,
-                  }}
-                >
-                  {company.intro}
-                </Typography>
+                <Typography sx={{ fontSize: 12, color: '#cbd5f5', mb: 1.5 }}>{company.intro}</Typography>
               )}
 
-              {/* roles */}
               {company.roles.map((role: Role) => {
                 const lines = role.description
                   ? role.description
@@ -94,26 +68,14 @@ export const ExperienceView: React.FC = () => {
                     className='entry'
                     sx={{ mb: 1.8 }}
                   >
-                    <Typography
-                      className='entry-title'
-                      sx={{ color: '#e5e7eb' }}
-                    >
-                      {company.company} · {role.name}
-                    </Typography>
+                    <Typography className='entry-title' sx={{ color: '#e5e7eb' }}>{role.name}</Typography>
 
-                    <Typography
-                      className='entry-meta'
-                      sx={{ fontSize: 12, color: '#9ca3af', mb: 0.5 }}
-                    >
+                    <Typography className='entry-meta' sx={{ fontSize: 12, color: '#9ca3af', mb: 0.5 }}>
                       {role.years} · {company.location}
                     </Typography>
 
                     {lines.map((line, index) => (
-                      <Typography
-                        key={index}
-                        className='entry-body'
-                        sx={{ fontSize: 12, color: '#d1d5db' }}
-                      >
+                      <Typography key={index} className='entry-body' sx={{ fontSize: 12, color: '#d1d5db' }}>
                         {line.replace(/^-+\s*/, '')}
                       </Typography>
                     ))}
@@ -124,9 +86,7 @@ export const ExperienceView: React.FC = () => {
           ))}
 
           {experiences.length === 0 && (
-            <Typography sx={{ fontSize: 12, color: '#9ca3af' }}>
-              No professional experience data found.
-            </Typography>
+            <Typography sx={{ fontSize: 12, color: '#9ca3af' }}>No professional experience data found.</Typography>
           )}
         </CardContent>
       </Card>
