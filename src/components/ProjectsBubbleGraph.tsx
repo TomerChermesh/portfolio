@@ -1,5 +1,5 @@
 import React from 'react'
-import {Box, SvgIcon} from '@mui/material'
+import { Box } from '@mui/material'
 import FPL_PROJECT_IMG from '../assets/fpl_mld_img.svg'
 
 import { openExternal } from '../utils/external'
@@ -12,7 +12,22 @@ export const ProjectsBubbleGraph: React.FC = () => {
   const bubbles: BubbleConfig[] = [
     {
       id: 'fpl',
-      icon: <SvgIcon src={FPL_PROJECT_IMG} alt={'fpl_mld'}/>,
+      icon: (
+        <Box
+          component='img'
+          src={FPL_PROJECT_IMG}
+          alt='FPL Mini-Leagues Data'
+          sx={{
+            width: 40,
+            height: 40,
+            borderRadius: '50%',
+            transition: 'transform 0.2s ease-out',
+            '&:hover': {
+              transform: 'scale(1.15)',
+            },
+          }}
+        />
+      ),
       label: 'FPL Mini-Leagues Data',
       onClick: () => openExternal(PROJECT_FPL_MLD)
     }
