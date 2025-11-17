@@ -1,6 +1,6 @@
 import React from 'react'
 import { Box, ButtonBase, Typography, Avatar } from '@mui/material'
-import {BubbleConfig, BubbleGraphProps} from '../types/bubble'
+import { BubbleConfig, BubbleGraphProps } from '../types/bubble'
 import { BUBBLE_RADIUS } from '../constants/bubbles'
 
 

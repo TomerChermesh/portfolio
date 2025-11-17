@@ -8,6 +8,7 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn'
 import GitHubIcon from '@mui/icons-material/GitHub'
 import FolderSpecialIcon from '@mui/icons-material/FolderSpecial'
 
+import { downloadCv, openExternal } from '../utils/external'
 import { BubbleGraph } from './BubbleGraph'
 import { BubbleConfig, HomeBubbleGraphProps } from '../types/bubble'
 import { CV_FILE_PATH, GITHUB_PROFILE, LINKEDIN_PROFILE } from '../constants/links'

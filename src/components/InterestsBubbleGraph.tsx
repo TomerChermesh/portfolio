@@ -9,7 +9,7 @@ import SportsEsportsIcon from '@mui/icons-material/SportsEsports'
 import LocalAirportIcon from '@mui/icons-material/LocalAirport'
 import Diversity1Icon from '@mui/icons-material/Diversity1'
 
-
+import { openExternal } from '../utils/external'
 import { BubbleGraph } from './BubbleGraph'
 import { BubbleConfig } from '../types/bubble'
 import { ICON_STYLE } from '../constants/style'

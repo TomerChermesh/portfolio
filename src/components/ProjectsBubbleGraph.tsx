@@ -2,7 +2,7 @@ import React from 'react'
 import {Box, SvgIcon} from '@mui/material'
 import FPL_PROJECT_IMG from '../assets/fpl_mld_img.svg'
 
-
+import { openExternal } from '../utils/external'
 import { BubbleGraph } from './BubbleGraph'
 import { BubbleConfig } from '../types/bubble'
 import { PROJECT_FPL_MLD } from '../constants/links'
