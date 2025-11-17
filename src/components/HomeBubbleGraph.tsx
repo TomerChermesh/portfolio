@@ -57,7 +57,7 @@ export const HomeBubbleGraph: React.FC<HomeBubbleGraphProps> = ({ onChangeView }
       label: 'Projects',
       icon: <FolderSpecialIcon sx={ICON_STYLE} />,
       onClick: () => onChangeView('projects'),
-    },
+    }
   ]
 
   return (
