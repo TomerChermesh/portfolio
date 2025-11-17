@@ -1,21 +1,11 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import { Box, Card, CardContent, Typography } from '@mui/material'
-import { JobExperience, Role } from '../types/experience'
+import type { JobExperience, Role } from '../types/experience'
 import { loadProfessionalExperience } from '../utils/experience'
 
+const experiences: JobExperience[] = loadProfessionalExperience()
+
 export const ExperienceView: React.FC = () => {
-  const [experiences, setExperiences] = useState<JobExperience[]>([])
-  const [error, setError] = useState<string | null>(null)
-
-  useEffect(() => {
-    loadProfessionalExperience()
-      .then(setExperiences)
-      .catch(err => {
-        console.error(err)
-        setError('Failed to load professional experience')
-      })
-  }, [])
-
   return (
     <Box sx={{ pt: 6 }}>
       <Card
@@ -54,14 +44,8 @@ export const ExperienceView: React.FC = () => {
             fontSize: 13,
           }}
         >
-          {error && (
-            <Typography sx={{ color: '#f97373', mb: 2 }}>
-              {error}
-            </Typography>
-          )}
-
           {experiences.map(company => (
-            <Box key={company.company} sx={{ mb: 2.5 }}>
+            <Box key={company.company} sx={{ mb: 3 }}>
               <Typography
                 sx={{
                   fontWeight: 600,
@@ -76,14 +60,14 @@ export const ExperienceView: React.FC = () => {
                 sx={{
                   fontSize: 12,
                   color: '#9ca3af',
-                  mb: company.intro ? 1 : 0.5,
+                  mb: company.intro ? 1 : 1.5,
                 }}
               >
                 {company.location}
                 {company.isCurrentJob ? ' · Current' : ''}
               </Typography>
 
-              {company.intro && (
+              {company.intro && company.intro.trim().length > 0 && (
                 <Typography
                   sx={{
                     fontSize: 12,
@@ -95,6 +79,7 @@ export const ExperienceView: React.FC = () => {
                 </Typography>
               )}
 
+              {/* roles */}
               {company.roles.map((role: Role) => {
                 const lines = role.description
                   ? role.description
@@ -104,12 +89,22 @@ export const ExperienceView: React.FC = () => {
                   : []
 
                 return (
-                  <Box key={`${company.company}-${role.name}-${role.years}`} className='entry' sx={{ mb: 1.5 }}>
-                    <Typography className='entry-title' sx={{ color: '#e5e7eb' }}>
+                  <Box
+                    key={`${company.company}-${role.name}-${role.years}`}
+                    className='entry'
+                    sx={{ mb: 1.8 }}
+                  >
+                    <Typography
+                      className='entry-title'
+                      sx={{ color: '#e5e7eb' }}
+                    >
                       {company.company} · {role.name}
                     </Typography>
 
-                    <Typography className='entry-meta' sx={{ fontSize: 12, color: '#9ca3af', mb: 0.5 }}>
+                    <Typography
+                      className='entry-meta'
+                      sx={{ fontSize: 12, color: '#9ca3af', mb: 0.5 }}
+                    >
                       {role.years} · {company.location}
                     </Typography>
 
@@ -128,9 +123,9 @@ export const ExperienceView: React.FC = () => {
             </Box>
           ))}
 
-          {!error && experiences.length === 0 && (
+          {experiences.length === 0 && (
             <Typography sx={{ fontSize: 12, color: '#9ca3af' }}>
-              Loading professional experience...
+              No professional experience data found.
             </Typography>
           )}
         </CardContent>

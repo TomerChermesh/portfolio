@@ -1,6 +1,6 @@
-import { loadJsonFile } from './files'
+import professionalExperienceJson from '../assets/professionalExperience.json'
 import { JobExperience } from '../types/experience'
 
-export const loadProfessionalExperience = async (): Promise<JobExperience[]> => {
-  return loadJsonFile<JobExperience[]>('../assets/professionalExperience.json')
+export const loadProfessionalExperience = (): JobExperience[] => {
+  return professionalExperienceJson as JobExperience[]
 }
