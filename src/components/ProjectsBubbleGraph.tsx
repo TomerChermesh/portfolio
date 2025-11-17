@@ -18,8 +18,8 @@ export const ProjectsBubbleGraph: React.FC = () => {
           src={FPL_PROJECT_IMG}
           alt='FPL Mini-Leagues Data'
           sx={{
-            width: 40,
-            height: 40,
+            width: 90,
+            height: 60,
             borderRadius: '50%',
             transition: 'transform 0.2s ease-out',
             '&:hover': {
