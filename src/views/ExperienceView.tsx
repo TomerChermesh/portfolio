@@ -1,35 +1,50 @@
-// src/views/ExperienceView.tsx
-import React from "react";
-import { Box, Card, CardContent, Typography } from "@mui/material";
+import React, { useEffect, useState } from 'react'
+import { Box, Card, CardContent, Typography } from '@mui/material'
+import { JobExperience, Role } from '../types/experience'
+import { loadProfessionalExperience } from '../utils/experience'
 
 export const ExperienceView: React.FC = () => {
+  const [experiences, setExperiences] = useState<JobExperience[]>([])
+  const [error, setError] = useState<string | null>(null)
+
+  useEffect(() => {
+    loadProfessionalExperience()
+      .then(setExperiences)
+      .catch(err => {
+        console.error(err)
+        setError('Failed to load professional experience')
+      })
+  }, [])
+
   return (
     <Box sx={{ pt: 6 }}>
       <Card
         sx={{
-          bgcolor: "#020617",
+          bgcolor: '#020617',
           borderRadius: 3,
-          border: "1px solid rgba(148,163,184,0.5)",
-          boxShadow: "0 18px 50px rgba(15,23,42,0.9)",
+          border: '1px solid rgba(148,163,184,0.5)',
+          boxShadow: '0 18px 50px rgba(15,23,42,0.9)',
         }}
       >
         <Box
           sx={{
-            display: "flex",
-            alignItems: "center",
+            display: 'flex',
+            alignItems: 'center',
             gap: 1,
             px: 1.5,
             py: 1,
-            borderBottom: "1px solid rgba(30,64,175,0.5)",
+            borderBottom: '1px solid rgba(30,64,175,0.5)',
             fontSize: 12,
-            color: "#9ca3af",
-            bgcolor: "#020617",
+            color: '#9ca3af',
+            bgcolor: '#020617',
           }}
         >
-          <Box className="dot red" />
-          <Box className="dot yellow" />
-          <Box className="dot green" />
-          <Typography sx={{ ml: 1 }}>tomerchermesh/experience</Typography>
+          <Box className='dot red' />
+          <Box className='dot yellow' />
+          <Box className='dot green' />
+          <Typography sx={{ ml: 1 }}>
+            tomerchermesh/professionalExperience
+          </Typography>
         </Box>
 
         <CardContent
@@ -39,31 +54,87 @@ export const ExperienceView: React.FC = () => {
             fontSize: 13,
           }}
         >
-          <Box className="entry">
-            <Typography className="entry-title">
-              Company One · Software Engineer
+          {error && (
+            <Typography sx={{ color: '#f97373', mb: 2 }}>
+              {error}
             </Typography>
-            <Typography className="entry-meta">
-              2022–Present · Tel Aviv
-            </Typography>
-            <Typography className="entry-body">
-              Placeholder – נכניס כאן את הניסיון האמיתי שלך.
-            </Typography>
-          </Box>
+          )}
 
-          <Box className="entry">
-            <Typography className="entry-title">
-              Company Two · Backend Developer
+          {experiences.map(company => (
+            <Box key={company.company} sx={{ mb: 2.5 }}>
+              <Typography
+                sx={{
+                  fontWeight: 600,
+                  color: '#e5e7eb',
+                  mb: 0.5,
+                }}
+              >
+                {company.company}
+              </Typography>
+
+              <Typography
+                sx={{
+                  fontSize: 12,
+                  color: '#9ca3af',
+                  mb: company.intro ? 1 : 0.5,
+                }}
+              >
+                {company.location}
+                {company.isCurrentJob ? ' · Current' : ''}
+              </Typography>
+
+              {company.intro && (
+                <Typography
+                  sx={{
+                    fontSize: 12,
+                    color: '#cbd5f5',
+                    mb: 1.5,
+                  }}
+                >
+                  {company.intro}
+                </Typography>
+              )}
+
+              {company.roles.map((role: Role) => {
+                const lines = role.description
+                  ? role.description
+                      .split('\n')
+                      .map(line => line.trim())
+                      .filter(line => line.length > 0)
+                  : []
+
+                return (
+                  <Box key={`${company.company}-${role.name}-${role.years}`} className='entry' sx={{ mb: 1.5 }}>
+                    <Typography className='entry-title' sx={{ color: '#e5e7eb' }}>
+                      {company.company} · {role.name}
+                    </Typography>
+
+                    <Typography className='entry-meta' sx={{ fontSize: 12, color: '#9ca3af', mb: 0.5 }}>
+                      {role.years} · {company.location}
+                    </Typography>
+
+                    {lines.map((line, index) => (
+                      <Typography
+                        key={index}
+                        className='entry-body'
+                        sx={{ fontSize: 12, color: '#d1d5db' }}
+                      >
+                        {line.replace(/^-+\s*/, '')}
+                      </Typography>
+                    ))}
+                  </Box>
+                )
+              })}
+            </Box>
+          ))}
+
+          {!error && experiences.length === 0 && (
+            <Typography sx={{ fontSize: 12, color: '#9ca3af' }}>
+              Loading professional experience...
             </Typography>
-            <Typography className="entry-meta">
-              2020–2022 · Remote
-            </Typography>
-            <Typography className="entry-body">
-              גם כאן נעדכן בהמשך בפרטים אמיתיים.
-            </Typography>
-          </Box>
+          )}
         </CardContent>
       </Card>
     </Box>
-  );
-};
+  )
+}

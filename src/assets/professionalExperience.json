@@ -1,0 +1,49 @@
+[
+  {
+    "company": "Tingo Medical",
+    "intro": "Joined as the first developer beyond the founders, playing a pivotal role in scaling the company from Seed to post-Series A and driving key technical contributions across critical clinical experiments.",
+    "isCurrentJob": false,
+    "location": "Modi'in, Israel",
+    "roles": [
+      {
+        "name": "Full-Stack Developer",
+        "years": "2022-2025",
+        "description": "- Designed & built scalable server-side RESTful APIs using Flask and OOP principles\n- Engineered DB schemas and optimized data queries using PostgreSQL & SQLAlchemy\n- Developed responsive web application with React and TypeScript\n- Used RTK Query for efficient Redux-based API handling across tabs\n- Integrated AWS EC2 and S3 for scalable cloud infrastructure and better file storing\n- Set up CI/CD pipelines with Git for automated integration and deployment"
+      },
+      {
+        "name": "Software Developer",
+        "years": "2021-2022",
+        "description": "- Built several platforms as internal development tools in Python and PyQt5 for UI\n- Solved performance and memory issues while loading large amount of data\n- Coded scripts in C for Arduino Uno boards to integrate external devices"
+      }
+    ],
+    "links": []
+  },
+  {
+    "company": "Sport 1 Channels (Charlton)",
+    "intro": "",
+    "isCurrentJob": false,
+    "location": "Herzliya, Israel",
+    "roles": [
+      {
+        "name": "TV Producer",
+        "years": "2019-2021",
+        "description": "- Produced live broadcasts, ensuring seamless operations under pressure\n- Managed and organized a large video database for efficient content retrieval"
+      }
+    ],
+    "links": []
+  },
+  {
+    "company": "Several Nightlife Ventures",
+    "intro": "",
+    "isCurrentJob": false,
+    "location": "Ra'anana, Israel",
+    "roles": [
+      {
+        "name": "Owner, Operations & Marketing Manager",
+        "years": "2019-2021",
+        "description": "- Co-founded and operated a dance bar, managed marketing and on-site operations\n- Produced large-scale nightlife events, including weekly club lines\n- Led marketing strategy and promotional campaigns across social media\n- Managed various teams, including recruitment, scheduling, and daily team leadership"
+      }
+    ],
+    "links": []
+  }
+]
