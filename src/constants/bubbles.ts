@@ -1,0 +1,1 @@
+export const BUBBLE_RADIUS: number = 46

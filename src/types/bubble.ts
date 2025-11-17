@@ -9,5 +9,9 @@ export type BubbleConfig = {
 };
 
 export type BubbleGraphProps = {
+  bubbles: BubbleConfig[]
+}
+
+export type HomeBubbleGraphProps = {
   onChangeView: (view: View) => void
 }

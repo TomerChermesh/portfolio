@@ -1,26 +1,23 @@
-import React from "react";
-import {Box, ButtonBase, Typography, Avatar} from "@mui/material";
-import {BubbleConfig} from "../types/bubble";
+import React from 'react'
+import { Box, ButtonBase, Typography, Avatar } from '@mui/material'
+import {BubbleConfig, BubbleGraphProps} from '../types/bubble'
+import { BUBBLE_RADIUS } from '../constants/bubbles'
 
-type BubbleGraphProps = {
-    bubbles: BubbleConfig[];
-};
+
 
 export const BubbleGraph: React.FC<BubbleGraphProps> = ({bubbles}) => {
-    const radius = 46;
-
     return (
-        <Box className="bubble-graph">
-            <Box className="center-wrapper">
-                <Box className="center-circle">
-                    <Box className="center-ring">
+        <Box className='bubble-graph'>
+            <Box className='center-wrapper'>
+                <Box className='center-circle'>
+                    <Box className='center-ring'>
                         <Avatar
                             sx={{
                                 width: 96,
                                 height: 96,
                                 fontSize: 32,
-                                bgcolor: "rgba(15,23,42,0.95)",
-                                color: "#e5e7eb",
+                                bgcolor: 'rgba(15,23,42,0.95)',
+                                color: '#e5e7eb',
                             }}
                         >
                             TC
@@ -29,10 +26,10 @@ export const BubbleGraph: React.FC<BubbleGraphProps> = ({bubbles}) => {
                 </Box>
             </Box>
 
-            {bubbles.map((bubble, index) => {
-                const angle = (2 * Math.PI * index) / bubbles.length - Math.PI / 2;
-                const left = 50 + radius * Math.cos(angle);
-                const top = 50 + radius * Math.sin(angle);
+            {bubbles.map((bubble: BubbleConfig, index: number) => {
+                const angle: number = (2 * Math.PI * index) / bubbles.length - Math.PI / 2
+                const left: number = 50 + BUBBLE_RADIUS * Math.cos(angle)
+                const top: number = 50 + BUBBLE_RADIUS * Math.sin(angle)
 
                 return (
                     <Box key={bubble.id} className='orbit-bubble-wrapper' style={{left: `${left}%`, top: `${top}%`}}>
@@ -41,11 +38,10 @@ export const BubbleGraph: React.FC<BubbleGraphProps> = ({bubbles}) => {
                                 <Box className='orbit-icon'>{bubble.icon}</Box>
                             </Box>
                         </ButtonBase>
-
                         <Typography className='orbit-label-hover'>{bubble.label}</Typography>
                     </Box>
-                );
+                )
             })}
         </Box>
-    );
-};
+    )
+}
