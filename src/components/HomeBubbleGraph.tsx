@@ -20,7 +20,7 @@ export const HomeBubbleGraph: React.FC<HomeBubbleGraphProps> = ({ onChangeView }
       id: 'cv',
       label: 'CV',
       icon: <DescriptionIcon sx={ICON_STYLE} />,
-      onClick: downloadCv(CV_FILE_PATH)
+      onClick: () => downloadCv(CV_FILE_PATH)
     },
     {
       id: 'linkedin',
