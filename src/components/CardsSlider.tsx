@@ -67,8 +67,10 @@ export const CardsSlider: React.FC<props> = ({title, cardsInfo}) => {
                                         bgcolor: '#020617',
                                     }}
                                 >
-                                    <Box className='dot red'/><Box className='dot yellow'/><Box className='dot green'/>
-                                    <Typography sx={{ml: 1}}>tomerchermesh/{title}</Typography>
+                                    <Box className='dot red'/>
+                                    <Box className='dot yellow'/>
+                                    <Box className='dot green'/>
+                                    <Typography sx={{ml: 1}}>~/tomerchermesh/{title}</Typography>
                                 </Box>
 
                                 <CardContent
