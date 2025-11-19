@@ -153,7 +153,13 @@ export const CardsSlider: React.FC<props> = ({title, cardsInfo}) => {
                                                     component='img'
                                                     src={new URL(`../assets/${company.logo}`, import.meta.url).href}
                                                     alt={`${company.company} logo`}
-                                                    sx={{ width: '100%', height: '100%', objectFit: 'contain' }}
+                                                    sx={{
+                                                        width: '100%',
+                                                        height: '100%',
+                                                        objectFit: 'contain',
+                                                        transition: 'transform 0.2s ease',
+                                                        '&:hover': { transform: 'scale(1.07)' }
+                                                }}
                                                 />
                                             </Box>
                                         )}
