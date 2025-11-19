@@ -4,6 +4,7 @@ import DescriptionIcon from '@mui/icons-material/Description'
 import WorkOutlineIcon from '@mui/icons-material/WorkOutline'
 import SchoolIcon from '@mui/icons-material/School'
 import InterestsIcon from '@mui/icons-material/Interests'
+import AutoAwesomeIcon from '@mui/icons-material/AutoAwesome'
 import LinkedInIcon from '@mui/icons-material/LinkedIn'
 import GitHubIcon from '@mui/icons-material/GitHub'
 import FolderSpecialIcon from '@mui/icons-material/FolderSpecial'
@@ -25,13 +26,13 @@ export const HomeBubbleGraph: React.FC<HomeBubbleGraphProps> = ({ onChangeView }
     },
     {
       id: 'linkedin',
-      label: 'LinkedIn',
+      label: 'LinkedIn Profile',
       icon: <LinkedInIcon sx={ICON_STYLE} />,
       onClick: () => openExternal(LINKEDIN_PROFILE)
     },
     {
       id: 'github',
-      label: 'GitHub',
+      label: 'GitHub Profile',
       icon: <GitHubIcon sx={ICON_STYLE} />,
       onClick: () => openExternal(GITHUB_PROFILE)
     },
@@ -42,16 +43,22 @@ export const HomeBubbleGraph: React.FC<HomeBubbleGraphProps> = ({ onChangeView }
       onClick: () => onChangeView('interests')
     },
     {
-      id: 'experience',
-      label: 'Professional Experience',
-      icon: <WorkOutlineIcon sx={ICON_STYLE} />,
-      onClick: () => onChangeView('experience'),
-    },
-    {
       id: 'education',
       label: 'Education',
       icon: <SchoolIcon sx={ICON_STYLE} />,
       onClick: () => onChangeView('education'),
+    },
+    {
+      id: 'activities',
+      label: 'Additional Activities',
+      icon: <AutoAwesomeIcon sx={ICON_STYLE} />,
+      onClick: () => onChangeView('activities')
+    },
+    {
+      id: 'experience',
+      label: 'Professional Experience',
+      icon: <WorkOutlineIcon sx={ICON_STYLE} />,
+      onClick: () => onChangeView('experience'),
     },
     {
       id: 'projects',

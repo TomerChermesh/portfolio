@@ -1,0 +1,32 @@
+[
+  {
+    "company": "Ha’Podium",
+    "intro": "",
+    "isCurrentJob": true,
+    "location": "Modi'in, Israel",
+    "roles": [
+      {
+        "name": "Podcaster",
+        "years": "2023-Present",
+        "description": "- Weekly participation in international sports’ panel\n- Bringing a deep, expert-level understanding of various sports with unique perspectives"
+      }
+    ],
+    "link": "https://www.youtube.com/@hapodium",
+    "logo": "hapodium_logo.jpeg"
+  },
+  {
+    "company": "RU Developers Club",
+    "intro": "",
+    "isCurrentJob": false,
+    "location": "Herzliya, Israel",
+    "roles": [
+      {
+        "name": "Co-Founder, Marketing Manager and Lecturer",
+        "years": "2021-2022",
+        "description": "- Founded the club and established its core guidelines\n- Lectured and mentored while providing guidance throughout project development\n- Developed marketing strategies, managed social media pages, and created content\n- 130+ Alumni over 9 classes until today"
+      }
+    ],
+    "link": "https://www.linkedin.com/company/ru-dev-club/",
+    "logo": "ru_developers_club.jpg"
+  }
+]

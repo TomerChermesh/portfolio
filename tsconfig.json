@@ -16,5 +16,8 @@
     "noEmit": true,
     "jsx": "react-jsx"
   },
-  "include": ["src"]
+  "include": [
+    "src",
+    "../../../Library/Caches/JetBrains/PyCharm2023.3/javascript/typings/node/22.14.1/node_modules/@types/node/module.d.ts"
+  ]
 }

@@ -10,5 +10,6 @@ export type JobExperience = {
   isCurrentJob: boolean
   location: string
   roles: Role[]
-  links: string[]
+  link: string
+  logo: string
 }
