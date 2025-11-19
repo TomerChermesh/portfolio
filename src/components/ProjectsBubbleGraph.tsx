@@ -1,6 +1,6 @@
 import React from 'react'
 import { Box } from '@mui/material'
-import FPL_PROJECT_IMG from '../assets/fpl_mld_img.svg'
+import FPL_PROJECT_IMG from '../assets/images/fpl_mld_img.svg'
 
 import { openExternal } from '../utils/external'
 import { BubbleGraph } from './BubbleGraph'

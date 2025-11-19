@@ -145,15 +145,18 @@ export const CardsSlider: React.FC<props> = ({title, cardsInfo}) => {
                                                     justifyContent: 'center',
                                                     borderRadius: 2,
                                                     border: '1px solid rgba(148,163,184,0.5)',
-                                                    width: 40,
-                                                    height: 40,
+                                                    width: 50,
+                                                    height: 50,
                                                     overflow: 'hidden',
                                                     bgcolor: '#020617'
                                                 }}
                                             >
                                                 <Box
                                                     component='img'
-                                                    src={new URL(`../assets/${company.logo}`, import.meta.url).href}
+                                                    src={new URL(
+                                                        `../assets/images/${company.logo}`,
+                                                        import.meta.url
+                                                    ).href}
                                                     alt={`${company.company} logo`}
                                                     sx={{
                                                         width: '100%',

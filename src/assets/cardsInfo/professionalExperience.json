@@ -8,7 +8,7 @@
       {
         "name": "Full-Stack Developer",
         "years": "2022-2025",
-        "description": "- Designed & built scalable server-side RESTful APIs using Flask and OOP principles\n- Engineered DB schemas and optimized data queries using PostgreSQL & SQLAlchemy\n- Developed responsive web application with React and TypeScript\n- Used RTK Query for efficient Redux-based API handling across tabs\n- Integrated AWS EC2 and S3 for scalable cloud infrastructure and better file storing\n- Set up CI/CD pipelines with Git for automated integration and deployment"
+        "description": "- Designed &amp; built scalable server-side RESTful APIs using FastAPI and OOP principles\n- Engineered DB schemas and optimized data queries using PostgreSQL &amp; MongoDB\n- Developed responsive web application with React TypeScript\n- Used RTK Query for efficient Redux-based API handling across tabs\n- Integrated AWS EC2 and S3 for scalable cloud infrastructure and better file storing\n- Set up CI/CD pipelines with Git for automated integration and deployment"
       },
       {
         "name": "Software Developer",
@@ -43,7 +43,7 @@
       {
         "name": "Owner, Operations & Marketing Manager",
         "years": "2014-2018",
-        "description": "- Co-founded and operated a dance bar, managed marketing and on-site operations\n- Produced large-scale nightlife events, including weekly club lines\n- Led marketing strategy and promotional campaigns across social media\n- Managed various teams, including recruitment, scheduling, and daily team leadership"
+        "description": "- Co-founded and operated a dance bar, managed marketing and on-site operations\n- Produced large-scale nightlife events, including weekly club lines\n- Led marketing strategy and promotional campaigns across social media\n- Led various teams, including recruitment, scheduling, and daily team management"
       }
     ],
     "link": "",
