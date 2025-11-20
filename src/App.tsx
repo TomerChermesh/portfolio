@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import {Box, Container, CssBaseline, ThemeProvider, createTheme, Theme} from '@mui/material'
+import { Box, Container, CssBaseline, ThemeProvider, createTheme, Theme } from '@mui/material'
 import './App.css'
 import { HomeBubbleGraph } from './components/HomeBubbleGraph'
 import { ExperienceView } from './views/ExperienceView'
@@ -7,7 +7,7 @@ import { EducationView } from './views/EducationView'
 import { BackButton } from './components/BackButton'
 import { InterestsBubbleGraph } from './components/InterestsBubbleGraph'
 import { ProjectsBubbleGraph } from './components/ProjectsBubbleGraph'
-import {ActivitiesView} from "./views/ActivitiesView";
+import { ActivitiesView } from "./views/ActivitiesView";
 
 export type View = | 'home' | 'experience' | 'education' | 'interests' | 'projects' | 'activities'
 
