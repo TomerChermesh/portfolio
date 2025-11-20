@@ -6,7 +6,7 @@ import STADIUMAP_PROJECT_IMG from '../assets/images/stadiumap_logo.svg'
 import { openExternal } from '../utils/external'
 import { BubbleGraph } from './BubbleGraph'
 import { BubbleConfig } from '../types/bubble'
-import { PROJECT_FPL_MLD } from '../constants/links'
+import { PROJECT_FPL_MLI, PROJECT_STADIUMAP } from '../constants/links'
 
 
 export const ProjectsBubbleGraph: React.FC = () => {
@@ -30,7 +30,7 @@ export const ProjectsBubbleGraph: React.FC = () => {
         />
       ),
       label: 'FPL Mini-Leagues Data',
-      onClick: () => openExternal(PROJECT_FPL_MLD)
+      onClick: () => openExternal(PROJECT_FPL_MLI)
     },
     {
       id: 'stadiumap',
@@ -50,7 +50,8 @@ export const ProjectsBubbleGraph: React.FC = () => {
           }}
         />
       ),
-      label: 'Stadiumap (soon...)'
+      label: 'Stadiumap (with Gemini 3 Pro)',
+      onClick: () => openExternal(PROJECT_STADIUMAP)
     }
   ]
 
