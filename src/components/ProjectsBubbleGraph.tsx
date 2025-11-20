@@ -1,6 +1,7 @@
 import React from 'react'
 import { Box } from '@mui/material'
 import FPL_PROJECT_IMG from '../assets/images/fpl_mld_img.svg'
+import STADIUMAP_PROJECT_IMG from '../assets/images/stadiumap_logo.svg'
 
 import { openExternal } from '../utils/external'
 import { BubbleGraph } from './BubbleGraph'
@@ -24,12 +25,32 @@ export const ProjectsBubbleGraph: React.FC = () => {
             transition: 'transform 0.2s ease-out',
             '&:hover': {
               transform: 'scale(1.15)',
-            },
+            }
           }}
         />
       ),
       label: 'FPL Mini-Leagues Data',
       onClick: () => openExternal(PROJECT_FPL_MLD)
+    },
+    {
+      id: 'stadiumap',
+      icon: (
+        <Box
+          component='img'
+          src={STADIUMAP_PROJECT_IMG}
+          alt='Stadiumap'
+          sx={{
+            width: 90,
+            height: 60,
+            borderRadius: '50%',
+            transition: 'transform 0.2s ease-out',
+            '&:hover': {
+              transform: 'scale(1.15)',
+            },
+          }}
+        />
+      ),
+      label: 'Stadiumap (soon...)'
     }
   ]
 
