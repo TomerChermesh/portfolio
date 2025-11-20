@@ -8,6 +8,7 @@ import { BackButton } from './components/BackButton'
 import { InterestsBubbleGraph } from './components/InterestsBubbleGraph'
 import { ProjectsBubbleGraph } from './components/ProjectsBubbleGraph'
 import { ActivitiesView } from "./views/ActivitiesView";
+import Footer from "./components/Footer";
 
 export type View = | 'home' | 'experience' | 'education' | 'interests' | 'projects' | 'activities'
 
@@ -48,6 +49,7 @@ function App() {
                     )}
                 </Container>
             </Box>
+            <Footer/>
         </ThemeProvider>
     )
 }

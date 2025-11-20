@@ -16,7 +16,7 @@ export const ProjectsBubbleGraph: React.FC = () => {
         <Box
           component='img'
           src={FPL_PROJECT_IMG}
-          alt='FPL Mini-Leagues Data'
+          alt='FPL Mini-League Insights'
           sx={{
             width: 90,
             height: 60,
