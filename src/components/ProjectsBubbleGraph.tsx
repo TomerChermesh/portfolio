@@ -29,7 +29,7 @@ export const ProjectsBubbleGraph: React.FC = () => {
           }}
         />
       ),
-      label: 'FPL Mini-Leagues Data',
+      label: 'FPL Mini-Leagues Insights',
       onClick: () => openExternal(PROJECT_FPL_MLI)
     },
     {
