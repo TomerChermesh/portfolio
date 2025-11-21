@@ -7,6 +7,8 @@ import { openExternal } from '../utils/external'
 import { BubbleGraph } from './BubbleGraph'
 import { BubbleConfig } from '../types/bubble'
 import { PROJECT_FPL_MLI, PROJECT_STADIUMAP } from '../constants/links'
+import FolderSpecialIcon from '@mui/icons-material/FolderSpecial'
+import { CENTER_ICON_STYLE } from '../constants/style'
 
 
 export const ProjectsBubbleGraph: React.FC = () => {
@@ -57,7 +59,7 @@ export const ProjectsBubbleGraph: React.FC = () => {
 
   return (
     <Box sx={{ width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-      <BubbleGraph bubbles={bubbles} />
+      <BubbleGraph bubbles={bubbles} initialCenterIcon={<FolderSpecialIcon sx={CENTER_ICON_STYLE}/>} />
     </Box>
   )
 }

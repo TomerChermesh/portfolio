@@ -1,11 +1,19 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { Box, ButtonBase, Typography, Avatar } from '@mui/material'
 import { BubbleConfig, BubbleGraphProps } from '../types/bubble'
 import { BUBBLE_RADIUS } from '../constants/bubbles'
+import AccountCircleIcon from '@mui/icons-material/AccountCircle'
+import { CENTER_ICON_STYLE } from '../constants/style'
 
 
+export const BubbleGraph: React.FC<BubbleGraphProps> = ({bubbles, initialCenterIcon}) => {
+    const [centerIcon, setCenterIcon] = useState<React.ReactNode | null>(initialCenterIcon ?? null)
 
-export const BubbleGraph: React.FC<BubbleGraphProps> = ({bubbles}) => {
+    const handleBubbleClick = (bubble: BubbleConfig): void => {
+        setCenterIcon(bubble.icon)
+        if (bubble.onClick) bubble.onClick()
+    }
+
     return (
         <Box className='bubble-graph'>
             <Box className='center-wrapper'>
@@ -13,14 +21,14 @@ export const BubbleGraph: React.FC<BubbleGraphProps> = ({bubbles}) => {
                     <Box className='center-ring'>
                         <Avatar
                             sx={{
-                                width: 96,
-                                height: 96,
+                                width: 120,
+                                height: 120,
                                 fontSize: 32,
                                 bgcolor: 'rgba(15,23,42,0.95)',
                                 color: '#e5e7eb',
                             }}
                         >
-                            TC
+                            {centerIcon ?? (<AccountCircleIcon sx={CENTER_ICON_STYLE} />)}
                         </Avatar>
                     </Box>
                 </Box>
@@ -33,7 +41,7 @@ export const BubbleGraph: React.FC<BubbleGraphProps> = ({bubbles}) => {
 
                 return (
                     <Box key={bubble.id} className='orbit-bubble-wrapper' style={{left: `${left}%`, top: `${top}%`}}>
-                        <ButtonBase className='orbit-bubble' onClick={bubble.onClick} disableRipple>
+                        <ButtonBase className='orbit-bubble' onClick={(): void => handleBubbleClick(bubble)} disableRipple>
                             <Box className='orbit-inner'>
                                 <Box className='orbit-icon'>{bubble.icon}</Box>
                             </Box>

@@ -9,10 +9,10 @@ import SportsEsportsIcon from '@mui/icons-material/SportsEsports'
 import LocalAirportIcon from '@mui/icons-material/LocalAirport'
 import Diversity1Icon from '@mui/icons-material/Diversity1'
 
-import { openExternal } from '../utils/external'
 import { BubbleGraph } from './BubbleGraph'
 import { BubbleConfig } from '../types/bubble'
-import { ICON_STYLE } from '../constants/style'
+import { CENTER_ICON_STYLE, ICON_STYLE } from '../constants/style'
+import InterestsIcon from '@mui/icons-material/Interests'
 
 
 export const InterestsBubbleGraph: React.FC = () => {
@@ -61,7 +61,7 @@ export const InterestsBubbleGraph: React.FC = () => {
 
   return (
     <Box sx={{ width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-      <BubbleGraph bubbles={bubbles} />
+      <BubbleGraph bubbles={bubbles}  initialCenterIcon={<InterestsIcon sx={CENTER_ICON_STYLE}/>}/>
     </Box>
   )
 }

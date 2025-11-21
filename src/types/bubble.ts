@@ -10,6 +10,7 @@ export type BubbleConfig = {
 
 export type BubbleGraphProps = {
   bubbles: BubbleConfig[]
+  initialCenterIcon?: React.ReactNode
 }
 
 export type HomeBubbleGraphProps = {
