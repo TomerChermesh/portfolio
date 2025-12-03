@@ -6,11 +6,11 @@ import AccountCircleIcon from '@mui/icons-material/AccountCircle'
 import { CENTER_ICON_STYLE } from '../constants/style'
 
 
-export const BubbleGraph: React.FC<BubbleGraphProps> = ({bubbles, initialCenterIcon}) => {
+export const BubbleGraph: React.FC<BubbleGraphProps> = ({bubbles, toChangeCenterIcon, initialCenterIcon}) => {
     const [centerIcon, setCenterIcon] = useState<React.ReactNode | null>(initialCenterIcon ?? null)
 
     const handleBubbleClick = (bubble: BubbleConfig): void => {
-        setCenterIcon(bubble.icon)
+        if (toChangeCenterIcon) setCenterIcon(bubble.icon)
         if (bubble.onClick) bubble.onClick()
     }
 

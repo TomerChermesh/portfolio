@@ -81,7 +81,7 @@ export const ProjectsBubbleGraph: React.FC = () => {
 
   return (
     <Box sx={{ width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-      <BubbleGraph bubbles={bubbles} initialCenterIcon={<FolderSpecialIcon sx={CENTER_ICON_STYLE}/>} />
+      <BubbleGraph bubbles={bubbles} toChangeCenterIcon={false} initialCenterIcon={<FolderSpecialIcon sx={CENTER_ICON_STYLE}/>} />
     </Box>
   )
 }

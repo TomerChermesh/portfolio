@@ -70,7 +70,7 @@ export const HomeBubbleGraph: React.FC<HomeBubbleGraphProps> = ({ onChangeView }
 
   return (
     <Box sx={{ width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-      <BubbleGraph bubbles={bubbles} />
+      <BubbleGraph bubbles={bubbles} toChangeCenterIcon={true}/>
     </Box>
   )
 }
