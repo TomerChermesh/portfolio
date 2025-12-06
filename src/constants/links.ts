@@ -4,3 +4,5 @@ export const CV_FILE_PATH: string = '/TomerChermeshCV.pdf'
 export const PROJECT_FPL_MLI: string = 'https://fpl.tomerchermesh.com'
 export const PROJECT_STADIUMAP: string = 'https://stadiumap.tomerchermesh.com/'
 export const PROJECT_TICTACTOE: string = 'https://github.com/TomerChermesh/tictactoe'
+export const PROJECT_CENTRIQ: string = 'https://centriq.tomerchermesh.com/'
+

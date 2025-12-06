@@ -1,0 +1,21 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+	<defs>
+		<image  width="27" height="26" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABsAAAAaCAMAAABxVtfCAAAAAXNSR0IB2cksfwAAAORQTFRFAAAAAI3/AIz/AKr/AID/AI3/AI3/AIz/AIz/AIz/AIz/AIr/AI3/AIz/AI7/AI3/AI3/AJn/AI3/AIz/AIr/AIz/AJn/AI3/AI//AIz/AI3/AIz/AI3/AI7/AI3/AI3/AIr/AIz/AIz/AI3/AI7/AIz/AI3/AIj/AIz/AIz/AIz/AJL/AI3/AI3/AIz/AJD/AI3/AI3/AIn/AI3/AI3/AIz/AIv/AID/AIz/AI3/AIz/AI7/AP//AI7/AI3/AI3/AI3/AIv/AI3/AI3/AIz/AIz/AID/AIz/AI3/AI//AIz/AIz/FjL9KQAAAEx0Uk5TAJHnAwbx/1RkvdUjYLsk9XIF1Pkw3grOIB/Q8lNP85QlfOmYRJ7vD3b3vw5u2ZUnVY0NHcnwTQSQhtcJASLh/kos+H+X7gI+6DuM45YvJLcAAAD+SURBVHicddHvS8JAHAbw58EkGf5giNBAyRcKwV4UGIhgRBgU/b8RCGpYgQQKBr7ohYigELEXQkUoGs7Ntdvu9rzY7u5z92XfGyGE5EacCuMD25YRlvhD7DfCtDUQ/1FacmU/Dr9UlqZTT1vIpvPbeadoScb4fpDhZ9D0hUe7Ch+iGX4hOznOfCt4O70Y87VjRS4thJMnJxuWpxK4KZInHKutZBEm+S5BLsuh+y1nIwbJ5OC/hwrfBDnlq98DUHU2utHzfYgG1PYLOOcLQlYfur/86PgJYYOZ7e2O8xGy4YrPwEULKsN1F5dsqu2mA0O8wUDTt+3GQ5Td8V6cbgHg5zNYCB7z0wAAAABJRU5ErkJggg=="/>
+	</defs>
+	<style>
+		tspan { white-space:pre } 
+		.t0 { font-size: 120px;fill: #008dff;font-weight: 400;font-family: "KarinaRegular", "Karina" } 
+	</style>
+	<filter id="f0">
+		<feFlood flood-color="#ffffff" flood-opacity="1" />
+		<feBlend mode="normal" in2="SourceGraphic"/>
+		<feComposite in2="SourceAlpha" operator="in" />
+	</filter>
+	<g id="Folder 1" filter="url(#f0)">
+		<text id="C" style="transform: matrix(1,0,0,1,159,242)" >
+			<tspan x="0" y="0" class="t0">C
+</tspan>
+		</text>
+		<use id="i" href="#img1" x="197" y="189"/>
+	</g>
+</svg>
