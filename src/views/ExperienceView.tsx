@@ -1,13 +1,13 @@
 import React from 'react'
 import type { JobExperience } from '../types/experience'
 import { loadProfessionalExperience } from '../utils/experience'
-import { CardsSlider } from '../components/CardsSlider'
+import { JobCardsSlider } from '../components/JobCardsSlider'
 
 
 export const ExperienceView: React.FC = () => {
     const experiences: JobExperience[] = loadProfessionalExperience()
 
     return (
-        <CardsSlider cardsInfo={experiences} title={'professionalExperience'}/>
+        <JobCardsSlider jobsCardsInfo={experiences} title={'professionalExperience'}/>
     )
 }

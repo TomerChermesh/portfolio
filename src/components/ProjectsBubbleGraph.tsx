@@ -3,7 +3,7 @@ import { Box } from '@mui/material'
 import FPL_PROJECT_IMG from '../assets/images/fpl_mli_logo.svg'
 import STADIUMAP_PROJECT_IMG from '../assets/images/stadiumap_logo.svg'
 import TIC_TAC_TOE_LOGO from '../assets/images/tictactoe_logo.svg'
-import CENTRIQ_LOGO from '../assets/images/centriq-logo.svg'
+import CENTRIQ_LOGO from '../assets/images/centriq_logo.svg'
 
 import { openExternal } from '../utils/external'
 import { BubbleGraph } from './BubbleGraph'

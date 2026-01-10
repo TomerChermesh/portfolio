@@ -1,8 +1,8 @@
 [
   {
-    "company": "Ha’Podium",
+    "name": "Ha’Podium",
     "intro": "",
-    "isCurrentJob": true,
+    "isCurrent": true,
     "location": "Modi'in, Israel",
     "roles": [
       {
@@ -15,9 +15,9 @@
     "logo": "hapodium_logo.jpeg"
   },
   {
-    "company": "RU Developers Club",
+    "name": "RU Developers Club",
     "intro": "",
-    "isCurrentJob": false,
+    "isCurrent": false,
     "location": "Herzliya, Israel",
     "roles": [
       {

@@ -1,11 +1,66 @@
 [
   {
-    "company": "Under Construction",
-    "intro": "",
-    "isCurrentJob": false,
-    "location": "",
-    "roles": [],
-    "link": "",
-    "logo": ""
+    "name": "Reichman University",
+    "degree": "Double Major in Entrepreneurship (BA) and Computer Science (BSc)",
+    "years": "2019-2022",
+    "gpa": 88,
+    "isCurrent": false,
+    "location": "Herzliya, Israel",
+    "courses": [
+      {
+        "name": "Design Patterns",
+        "grade": 95
+      },
+      {
+        "name": "Digital Architectures",
+        "grade": 92
+      },
+      {
+        "name": "UX/UI",
+        "grade": 90
+      },
+      {
+        "name": "Data Structures",
+        "grade": 89
+      },
+      {
+        "name": "C#",
+        "grade": 89
+      },
+      {
+        "name": "Product Management",
+        "grade": 86
+      },
+      {
+        "name": "Algorithms",
+        "grade": 84
+      }
+    ],
+    "link": "https://www.runi.ac.il/",
+    "logo": "reichman_university_logo.png",
+    "additionalInfo": "Co-founded and lectured a Developers Club during the degree",
+    "additionalInfoLink": ""
+  },
+  {
+    "name": "Metro-West High School",
+    "degree": "High-School Diploma",
+    "years": "2010-2012",
+    "gpa": null,
+    "isCurrent": false,
+    "location": "Ra'anana, Israel",
+    "courses": [
+      {
+        "name": "Mathematics (5 pts.)",
+        "grade": 92
+      },
+      {
+        "name": "Computer Sciences (5 pts.)",
+        "grade": 92
+      }
+    ],
+    "link": "https://metrowest.tik-tak.net/",
+    "logo": "metro_west_high_school_logo.png",
+    "additionalInfo": "",
+    "additionalInfoLink": ""
   }
 ]

@@ -1,8 +1,8 @@
 [
   {
-    "company": "Tingo Medical",
+    "name": "Tingo Medical",
     "intro": "",
-    "isCurrentJob": true,
+    "isCurrent": true,
     "location": "Tel-Aviv, Israel",
     "roles": [
       {
@@ -15,9 +15,9 @@
     "logo": "epilog_logo.png"
   },
   {
-    "company": "Tingo Medical",
+    "name": "Tingo Medical",
     "intro": "Joined as the first developer beyond the founders, playing a pivotal role in scaling the company from Seed to post-Series A and driving key technical contributions across critical clinical experiments.",
-    "isCurrentJob": false,
+    "isCurrent": false,
     "location": "Modi'in, Israel",
     "roles": [
       {
@@ -35,9 +35,9 @@
     "logo": "tingo_medical_ltd_logo.png"
   },
   {
-    "company": "Sport 1 Channels (Charlton)",
+    "name": "Sport 1 Channels (Charlton)",
     "intro": "",
-    "isCurrentJob": false,
+    "isCurrent": false,
     "location": "Herzliya, Israel",
     "roles": [
       {
@@ -50,9 +50,9 @@
     "logo": "sport_1_logo.png"
   },
   {
-    "company": "Several Nightlife Ventures",
+    "name": "Several Nightlife Ventures",
     "intro": "",
-    "isCurrentJob": false,
+    "isCurrent": false,
     "location": "Ra'anana, Israel",
     "roles": [
       {

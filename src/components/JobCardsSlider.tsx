@@ -4,10 +4,10 @@ import type { JobExperience, Role } from '../types/experience'
 
 type props = {
     title: string
-    cardsInfo: JobExperience[]
+    jobsCardsInfo: JobExperience[]
 }
 
-export const CardsSlider: React.FC<props> = ({title, cardsInfo}) => {
+export const JobCardsSlider: React.FC<props> = ({title, jobsCardsInfo}) => {
     const [activeIndex, setActiveIndex] = useState<number>(0)
     const scrollRef: RefObject<HTMLDivElement | null> = useRef<HTMLDivElement | null>(null)
 
@@ -41,8 +41,8 @@ export const CardsSlider: React.FC<props> = ({title, cardsInfo}) => {
                 }}
             >
                 <Box sx={{display: 'flex', minWidth: '100%'}}>
-                    {cardsInfo.map(company => (
-                        <Box key={company.company}
+                    {jobsCardsInfo.map(company => (
+                        <Box key={company.name}
                              sx={{flex: '0 0 100%', scrollSnapAlign: 'start', px: {xs: 2, sm: 1}}}>
                             <Card
                                 sx={{
@@ -107,15 +107,15 @@ export const CardsSlider: React.FC<props> = ({title, cardsInfo}) => {
                                                     target='_blank'
                                                     rel='noopener noreferrer'
                                                 >
-                                                    {company.company}
+                                                    {company.name}
                                                     <Box component='span' sx={{fontSize: 12}}>↗</Box>
                                                 </Typography>
                                             ) : (
                                                 <Typography sx={{fontWeight: 600, color: '#e5e7eb', mb: 0.5}}>
-                                                    {company.company}
+                                                    {company.name}
                                                 </Typography>
                                             )}
-                                            {company.isCurrentJob && (
+                                            {company.isCurrent && (
                                                 <Box
                                                     sx={{
                                                         px: 1,
@@ -226,7 +226,7 @@ export const CardsSlider: React.FC<props> = ({title, cardsInfo}) => {
             </Box>
 
             <Box sx={{ display: 'flex', justifyContent: 'center', gap: 1, mt: 2 }}>
-                {cardsInfo.map((_: JobExperience, index: number) => (
+                {jobsCardsInfo.map((_: JobExperience, index: number) => (
                     <Box
                         key={index}
                         onClick={() => scrollTo(index)}
