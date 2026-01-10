@@ -1,6 +1,21 @@
 [
   {
     "company": "Tingo Medical",
+    "intro": "",
+    "isCurrentJob": true,
+    "location": "Tel-Aviv, Israel",
+    "roles": [
+      {
+        "name": "Full-Stack Developer",
+        "years": "2025-Present",
+        "description": ""
+      }
+    ],
+    "link": "https://epilog.world/",
+    "logo": "epilog_logo.png"
+  },
+  {
+    "company": "Tingo Medical",
     "intro": "Joined as the first developer beyond the founders, playing a pivotal role in scaling the company from Seed to post-Series A and driving key technical contributions across critical clinical experiments.",
     "isCurrentJob": false,
     "location": "Modi'in, Israel",

@@ -3,7 +3,7 @@ import { Box } from '@mui/material'
 import FPL_PROJECT_IMG from '../assets/images/fpl_mli_logo.svg'
 import STADIUMAP_PROJECT_IMG from '../assets/images/stadiumap_logo.svg'
 import TIC_TAC_TOE_LOGO from '../assets/images/tictactoe_logo.svg'
-import CENTRIQ_LOGO from '../assets/images/centriq-logo.svg.svg'
+import CENTRIQ_LOGO from '../assets/images/centriq-logo.svg'
 
 import { openExternal } from '../utils/external'
 import { BubbleGraph } from './BubbleGraph'
@@ -65,8 +65,8 @@ export const ProjectsBubbleGraph: React.FC = () => {
           src={CENTRIQ_LOGO}
           alt='Centriq Project'
           sx={{
-            width: 90,
-            height: 60,
+            width: 100,
+            height: 100,
             borderRadius: '50%',
             transition: 'transform 0.2s ease-out',
             '&:hover': {
