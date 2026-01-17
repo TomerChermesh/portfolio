@@ -1,12 +1,12 @@
-export interface Role = {
+export interface Role {
   name: string
   years: string
   description: string
 }
 
-export interface Course = {
+export interface Course {
     name: string
-    grade: int
+    grade: number
 }
 
 interface Experience {
@@ -19,7 +19,7 @@ interface Experience {
     logo: string
 }
 
-export interface JobExperience extends Experience = {
+export interface JobExperience extends Experience {
     intro: string
     roles: Role[]
 }
@@ -27,7 +27,7 @@ export interface JobExperience extends Experience = {
 export interface EducationExperience extends Experience {
     degree: string
     years: string
-    gpa?: int
+    gpa?: number
     courses: Course[]
     additionalInfo: string
     additionalInfoLink: string

@@ -1,6 +1,6 @@
 import React, { useRef, useState, useCallback, RefObject } from 'react'
 import { Box, Card, CardContent, Typography } from '@mui/material'
-import type { EducationExperience, Course } from '../types/experience'
+import type { Course, EducationExperience } from '../types/experience'
 
 type props = {
     title: string
@@ -43,15 +43,18 @@ export const EducationCardsSlider: React.FC<props> = ({title, educationCardsInfo
                 <Box sx={{display: 'flex', minWidth: '100%'}}>
                     {educationCardsInfo.map(school => (
                         <Box key={school.name}
-                             sx={{flex: '0 0 100%', scrollSnapAlign: 'start', px: {xs: 2, sm: 1}}}>
+                             sx={{flex: '0 0 100%', scrollSnapAlign: 'start', px: {xs: 2, sm: 1}, display: 'flex', justifyContent: 'center'}}>
                             <Card
                                 sx={{
                                     bgcolor: '#020617',
                                     borderRadius: 3,
                                     border: '1px solid rgba(148,163,184,0.5)',
                                     boxShadow: '0 18px 50px rgba(15,23,42,0.9)',
-                                    maxWidth: {xs: '100%', sm: '80%', md: '65%'},
-                                    mx: 'auto'
+                                    width: {xs: '100%', sm: '80%', md: '65%'},
+                                    height: '60vh',
+                                    display: 'flex',
+                                    flexDirection: 'column',
+                                    overflowY: 'auto'
                                 }}
                             >
                                 <Box
@@ -78,6 +81,8 @@ export const EducationCardsSlider: React.FC<props> = ({title, educationCardsInfo
                                         fontFamily:
                                             'SF Mono, ui-monospace, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace',
                                         fontSize: 16,
+                                        pb: 0,
+                                        '&:last-child': { pb: 0 },
                                     }}
                                 >
                                     <Box
@@ -157,7 +162,7 @@ export const EducationCardsSlider: React.FC<props> = ({title, educationCardsInfo
                                                         `../assets/images/${school.logo}`,
                                                         import.meta.url
                                                     ).href}
-                                                    alt={`${school.school} logo`}
+                                                    alt={`${school.name} logo`}
                                                     sx={{
                                                         width: '100%',
                                                         height: '100%',
@@ -184,7 +189,7 @@ export const EducationCardsSlider: React.FC<props> = ({title, educationCardsInfo
                                     >
                                         <u>Relevant Coursework:</u>
                                     </Typography>
-                                    {school.courses.map(( course: string, index: number) => (
+                                    {school.courses.map(( course: Course, index: number) => (
                                         <Typography
                                             key={index}
                                             className='entry-body'

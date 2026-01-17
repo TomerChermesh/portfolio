@@ -43,15 +43,18 @@ export const JobCardsSlider: React.FC<props> = ({title, jobsCardsInfo}) => {
                 <Box sx={{display: 'flex', minWidth: '100%'}}>
                     {jobsCardsInfo.map(company => (
                         <Box key={company.name}
-                             sx={{flex: '0 0 100%', scrollSnapAlign: 'start', px: {xs: 2, sm: 1}}}>
+                             sx={{flex: '0 0 100%', scrollSnapAlign: 'start', px: {xs: 2, sm: 1}, display: 'flex', justifyContent: 'center'}}>
                             <Card
                                 sx={{
                                     bgcolor: '#020617',
                                     borderRadius: 3,
                                     border: '1px solid rgba(148,163,184,0.5)',
                                     boxShadow: '0 18px 50px rgba(15,23,42,0.9)',
-                                    maxWidth: {xs: '100%', sm: '80%', md: '65%'},
-                                    mx: 'auto'
+                                    width: {xs: '100%', sm: '80%', md: '65%'},
+                                    height: '60vh',
+                                    display: 'flex',
+                                    flexDirection: 'column',
+                                    overflowY: 'auto'
                                 }}
                             >
                                 <Box
@@ -78,6 +81,8 @@ export const JobCardsSlider: React.FC<props> = ({title, jobsCardsInfo}) => {
                                         fontFamily:
                                             'SF Mono, ui-monospace, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace',
                                         fontSize: 16,
+                                        pb: 0,
+                                        '&:last-child': { pb: 0 },
                                     }}
                                 >
                                     <Box
@@ -157,7 +162,7 @@ export const JobCardsSlider: React.FC<props> = ({title, jobsCardsInfo}) => {
                                                         `../assets/images/${company.logo}`,
                                                         import.meta.url
                                                     ).href}
-                                                    alt={`${company.company} logo`}
+                                                    alt={`${company.name} logo`}
                                                     sx={{
                                                         width: '100%',
                                                         height: '100%',

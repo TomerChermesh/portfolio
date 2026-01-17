@@ -11,8 +11,8 @@ export const BackButton: React.FC<Props> = ({ onClick }) => {
     <Box
       sx={{
         position: 'absolute',
-        top: 8,
-        left: 8,
+        top: {xs: -40, sm: -40},
+        left: {xs: 4, sm: 8},
         zIndex: 10,
         display: 'flex',
         alignItems: 'center',

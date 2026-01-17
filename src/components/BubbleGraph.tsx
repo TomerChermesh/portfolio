@@ -21,9 +21,9 @@ export const BubbleGraph: React.FC<BubbleGraphProps> = ({bubbles, toChangeCenter
                     <Box className='center-ring'>
                         <Avatar
                             sx={{
-                                width: 120,
-                                height: 120,
-                                fontSize: 32,
+                                width: {xs: 90, sm: 120},
+                                height: {xs: 90, sm: 120},
+                                fontSize: {xs: 24, sm: 32},
                                 bgcolor: 'rgba(15,23,42,0.95)',
                                 color: '#e5e7eb',
                             }}

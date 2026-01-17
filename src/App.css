@@ -89,6 +89,32 @@ body {
   box-shadow: 0 0 12px rgba(15, 23, 42, 0.9);
 }
 
+/* Mobile responsive */
+@media (max-width: 600px) {
+  .bubble-graph {
+    width: 320px;
+    height: 320px;
+  }
+
+  .center-circle {
+    width: 140px;
+    height: 140px;
+  }
+
+  .center-ring {
+    padding: 4px;
+  }
+
+  .orbit-inner {
+    width: 72px;
+    height: 72px;
+  }
+
+  .orbit-icon {
+    font-size: 20px;
+  }
+}
+
 .orbit-bubble:hover .orbit-inner {
   transform: scale(1.15);
   box-shadow: 0 0 26px rgba(59, 130, 246, 0.75);

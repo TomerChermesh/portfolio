@@ -8,6 +8,7 @@ import AutoAwesomeIcon from '@mui/icons-material/AutoAwesome'
 import LinkedInIcon from '@mui/icons-material/LinkedIn'
 import GitHubIcon from '@mui/icons-material/GitHub'
 import FolderSpecialIcon from '@mui/icons-material/FolderSpecial'
+import FitnessCenterIcon from '@mui/icons-material/FitnessCenter'
 
 import { downloadCv, openExternal } from '../utils/external'
 import { BubbleGraph } from './BubbleGraph'
@@ -41,6 +42,12 @@ export const HomeBubbleGraph: React.FC<HomeBubbleGraphProps> = ({ onChangeView }
       label: 'Interests',
       icon: <InterestsIcon sx={ICON_STYLE} />,
       onClick: () => onChangeView('interests')
+    },
+    {
+      id: 'skills',
+      label: 'Skills',
+      icon: <FitnessCenterIcon sx={ICON_STYLE} />,
+      onClick: () => onChangeView('skills'),
     },
     {
       id: 'education',
