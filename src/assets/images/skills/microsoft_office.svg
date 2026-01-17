@@ -1,0 +1,15 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+	<defs>
+		<image width="800" height="800" id="img1" href="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48IS0tIFVwbG9hZGVkIHRvOiBTVkcgUmVwbywgd3d3LnN2Z3JlcG8uY29tLCBHZW5lcmF0b3I6IFNWRyBSZXBvIE1peGVyIFRvb2xzIC0tPg0KPHN2ZyB3aWR0aD0iODAwcHgiIGhlaWdodD0iODAwcHgiIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCiAgPHRpdGxlPm1pY3Jvc29mdF9vZmZpY2U8L3RpdGxlPg0KICA8cmVjdCB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIGZpbGw9Im5vbmUiLz4NCiAgPHBhdGggZD0iTTMsMThsNC0xLjI1VjdsNy0yVjE5LjVMMy41LDE4LjI1LDE0LDIybDYtMS4yNVYzLjVMMTQsMiwzLDUuNzVaIi8+DQo8L3N2Zz4="/>
+	</defs>
+	<style>
+	</style>
+	<filter id="f0">
+		<feFlood flood-color="#ffffff" flood-opacity="1" />
+		<feBlend mode="normal" in2="SourceGraphic"/>
+		<feComposite in2="SourceAlpha" operator="in" />
+	</filter>
+	<g id="logos" filter="url(#f0)">
+		<use id="microsoft-office-svgrepo-com" href="#img1" transform="matrix(.5,0,0,.5,0,0)"/>
+	</g>
+</svg>

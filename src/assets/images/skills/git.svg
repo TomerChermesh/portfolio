@@ -1,0 +1,15 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+	<defs>
+		<image width="800" height="800" id="img1" href="data:image/svg+xml;base64,PCFET0NUWVBFIHN2ZyBQVUJMSUMgIi0vL1czQy8vRFREIFNWRyAxLjEvL0VOIiAiaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkIj4KDTwhLS0gVXBsb2FkZWQgdG86IFNWRyBSZXBvLCB3d3cuc3ZncmVwby5jb20sIFRyYW5zZm9ybWVkIGJ5OiBTVkcgUmVwbyBNaXhlciBUb29scyAtLT4KPHN2ZyB3aWR0aD0iODAwcHgiIGhlaWdodD0iODAwcHgiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KDTxnIGlkPSJTVkdSZXBvX2JnQ2FycmllciIgc3Ryb2tlLXdpZHRoPSIwIi8+Cg08ZyBpZD0iU1ZHUmVwb190cmFjZXJDYXJyaWVyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KDTxnIGlkPSJTVkdSZXBvX2ljb25DYXJyaWVyIj4gPHBhdGggZD0iTTUuMTM5ODQgNC43MjU2M0M1Ljk0NzQyIDQuMzExMiA2LjUgMy40NzAxMyA2LjUgMi41QzYuNSAxLjExOTI5IDUuMzgwNzEgMCA0IDBDMi42MTkyOSAwIDEuNSAxLjExOTI5IDEuNSAyLjVDMS41IDMuNTI1MTYgMi4xMTcwNSA0LjQwNjIgMyA0Ljc5MTk4VjExLjIwOEMyLjExNzA1IDExLjU5MzggMS41IDEyLjQ3NDggMS41IDEzLjVDMS41IDE0Ljg4MDcgMi42MTkyOSAxNiA0IDE2QzUuMzgwNzEgMTYgNi41IDE0Ljg4MDcgNi41IDEzLjVDNi41IDEyLjQ3NDggNS44ODI5NSAxMS41OTM4IDUgMTEuMjA4VjcuNDE0MjFMNy4wODU3OSA5LjVIOS43MDgwMkMxMC4wOTM4IDEwLjM4MyAxMC45NzQ4IDExIDEyIDExQzEzLjM4MDcgMTEgMTQuNSA5Ljg4MDcxIDE0LjUgOC41QzE0LjUgNy4xMTkyOSAxMy4zODA3IDYgMTIgNkMxMC45NzQ4IDYgMTAuMDkzOCA2LjYxNzA1IDkuNzA4MDIgNy41SDcuOTE0MjFMNS4xMzk4NCA0LjcyNTYzWiIgZmlsbD0iIzAwMDAwMCIvPiA8L2c+Cg08L3N2Zz4="/>
+	</defs>
+	<style>
+	</style>
+	<filter id="f0">
+		<feFlood flood-color="#ffffff" flood-opacity="1" />
+		<feBlend mode="normal" in2="SourceGraphic"/>
+		<feComposite in2="SourceAlpha" operator="in" />
+	</filter>
+	<g id="logos" filter="url(#f0)">
+		<use id="git-merge-svgrepo-com" href="#img1" transform="matrix(.5,0,0,.5,0,0)"/>
+	</g>
+</svg>

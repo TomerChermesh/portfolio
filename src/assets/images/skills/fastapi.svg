@@ -1,0 +1,15 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+	<defs>
+		<image width="800" height="800" id="img1" href="data:image/svg+xml;base64,PCFET0NUWVBFIHN2ZyBQVUJMSUMgIi0vL1czQy8vRFREIFNWRyAxLjEvL0VOIiAiaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkIj4KDTwhLS0gVXBsb2FkZWQgdG86IFNWRyBSZXBvLCB3d3cuc3ZncmVwby5jb20sIFRyYW5zZm9ybWVkIGJ5OiBTVkcgUmVwbyBNaXhlciBUb29scyAtLT4KPHN2ZyBmaWxsPSIjMDAwMDAwIiB3aWR0aD0iODAwcHgiIGhlaWdodD0iODAwcHgiIHZpZXdCb3g9IjAgMCAyNCAyNCIgcm9sZT0iaW1nIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgoNPGcgaWQ9IlNWR1JlcG9fYmdDYXJyaWVyIiBzdHJva2Utd2lkdGg9IjAiLz4KDTxnIGlkPSJTVkdSZXBvX3RyYWNlckNhcnJpZXIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgoNPGcgaWQ9IlNWR1JlcG9faWNvbkNhcnJpZXIiPgoNPHBhdGggZD0iTTEyIDBDNS4zNzUgMCAwIDUuMzc1IDAgMTJjMCA2LjYyNyA1LjM3NSAxMiAxMiAxMiA2LjYyNiAwIDEyLTUuMzczIDEyLTEyIDAtNi42MjUtNS4zNzMtMTItMTItMTJ6bS0uNjI0IDIxLjYydi03LjUyOEg3LjE5TDEzLjIwMyAyLjM4djcuNTI4aDQuMDI5TDExLjM3NiAyMS42MnoiLz4KDTwvZz4KDTwvc3ZnPg=="/>
+	</defs>
+	<style>
+	</style>
+	<filter id="f0">
+		<feFlood flood-color="#ffffff" flood-opacity="1" />
+		<feBlend mode="normal" in2="SourceGraphic"/>
+		<feComposite in2="SourceAlpha" operator="in" />
+	</filter>
+	<g id="logos" filter="url(#f0)">
+		<use id="fastapi-svgrepo-com" href="#img1" transform="matrix(.5,0,0,.5,0,0)"/>
+	</g>
+</svg>
